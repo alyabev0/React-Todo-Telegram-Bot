@@ -3,6 +3,9 @@ import './App.css';
 import Greetings from "./Greetings";
 import React from 'react';
 import style from './style';
+import TextField from './TextField';
+import FirstNameField from './FirstNameField';
+import LastNameField from './LastNameField';
 // import ReactDOM from 'react-dom';
 
 class SimpleForm extends React.Component {
@@ -10,6 +13,8 @@ class SimpleForm extends React.Component {
   state = {
     firstName: "",
     firstNameError: "",
+    lastName: "",
+    lastNameError: "",
   };
 
   validateName = name => {
@@ -21,7 +26,7 @@ class SimpleForm extends React.Component {
   };
 
   onFirstNameBlur = () => {
-    const { firstName } = this.state;
+    const { firstName } = this.state; //const firstName = this.state.firstName;
 
     const firstNameError = this.validateName( firstName );
 
@@ -33,29 +38,35 @@ class SimpleForm extends React.Component {
       firstName: event.target.value
     });
 
-    render() {
-      const { firstNameError, firstName } = this.state;
+    onLastNameBlur = () => {
+      const { lastName } = this.state;
+  
+      const lastNameError = this.validateName(lastName);
+  
+      return this.setState({ lastNameError });
+    };
+  
+    onLastNameChange = event =>
+      this.setState({
+        lastName: event.target.value
+      });
+  
+
+      render() {
+        const { firstNameError, firstName, lastName, lastNameError } = this.state;
   
       return (
         <div style={style.form}>
-          <div style={style.inputGroup}>
-            <label>
-              First name:
-              <input
-                style={style.input}
-                type="text"
-                name="firstName"
-                onChange={this.onFirstNameChange}
-                onBlur={this.onFirstNameBlur}
-              />
-              {firstNameError && (
-                <div style={style.error}>{firstNameError}</div>
-              )}
-            </label>
-          </div>
-  
-          <Greetings firstName={firstName} />
-        </div>
+        <FirstNameField onChange={this.onFirstNameChange}
+                        onBlur={this.onFirstNameBlur}
+                        error={firstNameError} />
+
+        <LastNameField onChange={this.onLastNameChange}
+                        onBlur={this.onLastNameBlur}
+                        error={lastNameError} />
+
+        <Greetings firstName={firstName} lastName={lastName} />
+      </div>
     );
   }
 }
