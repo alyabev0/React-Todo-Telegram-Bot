@@ -2,9 +2,11 @@
 import './App.css';
 import Greetings from "./Greetings";
 import React from 'react';
+import style from './style';
 // import ReactDOM from 'react-dom';
 
 class SimpleForm extends React.Component {
+
   state = {
     firstName: "",
     firstNameError: "",
@@ -31,45 +33,37 @@ class SimpleForm extends React.Component {
       firstName: event.target.value
     });
 
-  render() {
-    const { firstNameError, firstName } = this.state;
-
-    return (
-      <div 
-      style={{
-        margin: 50,
-        padding: 10,
-        width: 300,
-        border: "1px solid black",
-        backgroundColor: "black",
-        color: "white"
-      }}
-      >
-        <div style={{marginBottom: 10}}>
-          <label>
-            First name:
-            <input
-            style={{backgroundColor: '#EFEFFF', marginLeft: 10}}
-              type="text"
-              name="firstName"
-              onChange={this.onFirstNameChange}
-              onBlur={this.onFirstNameBlur}
-            />
-            {firstNameError && <div style={{color: 'red', margin: 5}}>{firstNameError}</div>}
-          </label>
+    render() {
+      const { firstNameError, firstName } = this.state;
+  
+      return (
+        <div style={style.form}>
+          <div style={style.inputGroup}>
+            <label>
+              First name:
+              <input
+                style={style.input}
+                type="text"
+                name="firstName"
+                onChange={this.onFirstNameChange}
+                onBlur={this.onFirstNameBlur}
+              />
+              {firstNameError && (
+                <div style={style.error}>{firstNameError}</div>
+              )}
+            </label>
+          </div>
+  
+          <Greetings firstName={firstName} />
         </div>
-
-        <Greetings
-          firstName={firstName}
-        />
-      </div>
     );
   }
 }
-const App = () => (
-  <div>
-    <SimpleForm />
-  </div>
-);
+// const App = () => (
+//   <div>
+//     <SimpleForm />
+//   </div>
+// );
 
-export default App;
+// export default App;
+export default SimpleForm;
