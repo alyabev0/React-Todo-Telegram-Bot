@@ -7,7 +7,7 @@ import React from 'react';
 const Header = () => (
     <React.Fragment>
       <header>
-      <h1>TODO List</h1>
+      Header
       </header>
       </React.Fragment>
   );

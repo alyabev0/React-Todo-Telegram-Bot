@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => (
     <React.Fragment>
       <footer>
-    <h3>Футер</h3>
+    Footer
     </footer>
       </React.Fragment>
   );
