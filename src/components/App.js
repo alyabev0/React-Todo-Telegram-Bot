@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import '../App.css';
+import './App.css';
 import React from 'react';
 import MainContent from './MainContent';
 import Footer from './Footer'
@@ -11,11 +11,11 @@ import Header from './Header'
 
 
 const App = () => (
-  <React.Fragment>
+  <div>
     <Header />
     <MainContent />
     <Footer />
-    </React.Fragment>
+    </div>
 );
 
 export default App;

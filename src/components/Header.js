@@ -1,12 +1,10 @@
-
-
-
-import '../App.css';
+import './App.css';
 import React from 'react';
+import "./Header.css";
 
 const Header = () => (
     <React.Fragment>
-      <header>
+      <header className = "navbar">
       Header
       </header>
       </React.Fragment>
