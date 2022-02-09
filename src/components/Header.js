@@ -6,15 +6,9 @@ import React from 'react';
 
 const Header = () => (
     <React.Fragment>
-      <h1>Я Паштет</h1>
-        <p>Люблю нюхать бебру</p>
-        <nav>
-        <ul>Список
-        <li>Элемент списка</li>
-        <li>Элемент списка</li>
-        <li>Элемент списка</li>
-      </ul>
-      </nav>
+      <header>
+      <h1>TODO List</h1>
+      </header>
       </React.Fragment>
   );
   
