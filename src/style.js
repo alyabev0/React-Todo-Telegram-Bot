@@ -1,5 +1,8 @@
-const style = {
-    
-};
+// var styles = {
+//     fontSize: 30,
+//     color: {
 
-export default style;
+//     }
+// };
+
+// export default styles;
