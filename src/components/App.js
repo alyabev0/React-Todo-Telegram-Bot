@@ -10,38 +10,17 @@ import jokesData from "./jokesData"
 // import style from './style';
 // import ReactDOM from 'react-dom';
 
-const jokeComponents = jokesData.map(joke => <Joke question={joke.question}
-  punchLine={joke.punchLine} />)
-
 
 function App() {
-  return(
-    <div className='Jokes'>
-      <Joke
-punchLine="It’s hard to explain puns to kleptomaniacs because they always
-take things literally."
-/>
-      <Joke
-      question="Did you hear about the mathematician who's afraid of
-      negative numbers?"
-      punchLine="He'll stop at nothing to avoid them!"
-      />
-      <Joke
-      question="Hear about the new restaurant called Karma?"
-      punchLine="There’s no menu: You get what you deserve."
-      />
-      <Joke
-      question="Did you hear about the actor who fell through the
-      floorboards?"
-      punchLine="He was just going through a stage."
-      />
-      <Joke
-      question="Did you hear about the claustrophobic astronaut?"
-      punchLine="He just needed a little space."
-      />
-    </div>
-  )
-  }
+  const jokeComponents = jokesData.map(joke => <Joke key={joke.id}
+    question={joke.question} punchLine={joke.punchLine} />)
+
+    return (
+      <div>
+      {jokeComponents}
+      </div>
+      )
+      }
 
 
 
