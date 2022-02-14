@@ -3,11 +3,16 @@ import './App.css';
 import React from 'react';
 import '../index.css';
 import Joke from "./Joke"
+import jokesData from "./jokesData"
 // import MainContent from './MainContent';
 // import Footer from './Footer'
 // import Header from './Header'
 // import style from './style';
 // import ReactDOM from 'react-dom';
+
+const jokeComponents = jokesData.map(joke => <Joke question={joke.question}
+  punchLine={joke.punchLine} />)
+
 
 function App() {
   return(
