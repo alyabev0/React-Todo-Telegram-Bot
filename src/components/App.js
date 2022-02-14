@@ -2,8 +2,8 @@
 import './App.css';
 import React from 'react';
 import '../index.css';
-import Joke from "./Joke"
-import jokesData from "./jokesData"
+// import Joke from "./Joke"
+// import jokesData from "./jokesData"
 // import MainContent from './MainContent';
 // import Footer from './Footer'
 // import Header from './Header'
@@ -12,12 +12,12 @@ import jokesData from "./jokesData"
 
 
 function App() {
-  const jokeComponents = jokesData.map(joke => <Joke key={joke.id}
-    question={joke.question} punchLine={joke.punchLine} />)
+  // const jokeComponents = jokesData.map(joke => <Joke key={joke.id}
+  //   question={joke.question} punchLine={joke.punchLine} />)
 
     return (
       <div>
-      {jokeComponents}
+      {/* {jokeComponents} */}
       </div>
       )
       }
