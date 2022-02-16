@@ -33,15 +33,16 @@ import '../index.css';
       constructor() {
         super()
         this.state = {
-          name: "Hui",
-          age: 10
+          isLoggedIn: true
+        }
+        if (this.state.isLoggedIn === true) {
+          this.state.isLoggedIn = "in"
         }
       }
 render(){
     return (
     <div>
-    <h1>{this.state.name}</h1>
-    <h3>{this.state.age} years old</h3>
+    <h1>You are currently logged {this.state.isLoggedIn}</h1>
     </div>
     )
     }
