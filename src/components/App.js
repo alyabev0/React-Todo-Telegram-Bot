@@ -11,17 +11,39 @@ import '../index.css';
 // import ReactDOM from 'react-dom';
 
 
-function App() {
-  // const jokeComponents = jokesData.map(joke => <Joke key={joke.id}
-  //   question={joke.question} punchLine={joke.punchLine} />)
+// class App extends React.Component {
+//  constructor() {
+//    super() //вызов конструктора родительского класса
+//    this.state = {
+//      answer: "Yes"
+//    }
+//  }
 
-    return (
-      <div>
-      {/* {jokeComponents} */}
-      </div>
-      )
+//   render() {
+//   return (
+//   <div>
+//   <h1>Is state important to know?</h1>
+//   <h1>-{this.state.answer}</h1>
+//   </div>
+//   )
+//   }
+//   }
+
+  class App extends React.Component {
+      constructor() {
+        super()
+        this.state = {
+          name: "Hui",
+          age: 10
+        }
       }
-
-
-
+render(){
+    return (
+    <div>
+    <h1>{this.state.name}</h1>
+    <h3>{this.state.age} years old</h3>
+    </div>
+    )
+    }
+  }
 export default App;
