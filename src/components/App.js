@@ -43,6 +43,7 @@ render(){
     return (
     <div>
     <h1>You are currently logged {this.state.isLoggedIn}</h1>
+    <button onMouseMove = {function() {console.log("I was clicked!")}}>Click me</button>
     </div>
     )
     }
