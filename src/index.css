@@ -1,21 +1,21 @@
-body {
-  margin: 0;
-  }
-  .contacts {
+div {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   }
-  .contact-card {
-  flex-basis: 250px;
-  margin: 20px;
+  h1 {
+  font-size: 3em;
   }
-  .contact-card > img {
-  width: 100%;
-  height: auto;
+  button {
+  border: 1px solid lightgray;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 4px;
   }
-  .contact-card > h3 {
-  text-align: center;
+  button:hover {
+  cursor: pointer;
   }
-  .contact-card > p {
-  font-size: 12px;
+  button:focus {
+  outline:0;
   }

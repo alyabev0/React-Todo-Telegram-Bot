@@ -11,41 +11,28 @@ import '../index.css';
 // import ReactDOM from 'react-dom';
 
 
-// class App extends React.Component {
-//  constructor() {
-//    super() //вызов конструктора родительского класса
-//    this.state = {
-//      answer: "Yes"
-//    }
-//  }
-
-//   render() {
-//   return (
-//   <div>
-//   <h1>Is state important to know?</h1>
-//   <h1>-{this.state.answer}</h1>
-//   </div>
-//   )
-//   }
-//   }
-
   class App extends React.Component {
       constructor() {
         super()
         this.state = {
-          isLoggedIn: true
-        }
-        if (this.state.isLoggedIn === true) {
-          this.state.isLoggedIn = "in"
-        }
-      }
+          count: 0
+          }
+          this.handleClick = this.handleClick.bind(this)
+          }
+          handleClick() {
+            this.setState((prevState) => {
+              return {
+                count: prevState.count + 1
+                }
+                })
+                }
 render(){
     return (
-    <div>
-    <h1>You are currently logged {this.state.isLoggedIn}</h1>
-    <button onMouseMove = {function() {console.log("I was clicked!")}}>Click me</button>
-    </div>
-    )
-    }
-  }
+      <div>
+      <h1>{this.state.count}</h1>
+      <button onClick={this.handleClick}>Change!</button>
+      </div>
+      )
+      }
+      }
 export default App;
