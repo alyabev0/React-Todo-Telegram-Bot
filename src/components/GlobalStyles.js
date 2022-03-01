@@ -45,12 +45,12 @@ export const GlobalStyles = createGlobalStyle`
   .todo-list {
     color: ${props => props.theme.colors.light};
     padding: 1rem 0 0;
+    margin-left: 25%;
   }
 
   .todo-input {
     max-width: 50%;
-
-    
+    margin-left: 25%;
   }
 
   .todo-item {
@@ -76,10 +76,11 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     position: relative;
     align-items: center;
-    margin-right: -1.5rem;
+    margin-left: 5%;
   }
 
   .todo-item-text {
+    // margin-left: 30px;
     display: flex;
     align-items: center;
     padding: 0 0.75rem 0 0;
