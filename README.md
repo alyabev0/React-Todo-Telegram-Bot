@@ -1,7 +1,7 @@
 # React Todo App
 ToDo List на ReactJS. 
 
-[**Стартовая страница проекта**](https://alyabev0.github.io/Metalamp/) + [**Макет**](https://www.figma.com/file/MumYcKVk9RkKZEG6dR5E3A/MetaLamp-(former-FSD)-frontend-education-program.-The-2nd-task)
+[**Стартовая страница проекта**](https://alyabev0.github.io/Metalamp/)
 
 ## 🤖Технологии
 ***[ReactJS](https://ru.reactjs.org/)***
