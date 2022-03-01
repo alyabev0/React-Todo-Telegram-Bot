@@ -30,9 +30,9 @@ class TodoInput extends React.Component {
   render() {
     return (
       <div className="todo-input">
-        <label htmlFor="todoInput" className="todo-input-label">
+        {/* <label htmlFor="todoInput" className="todo-input-label">
           Add item
-        </label>
+        </label> */}
         <input
           type="text"
           id="todoInput"
@@ -42,7 +42,7 @@ class TodoInput extends React.Component {
           onChange={this.handleUpdate}
           onKeyUp={this.handleKeyUp}
         />
-        <input type="button" onClick={this.addTodo} value="Add" />
+        <input type="button" className = "todo-input-add-button" onClick={this.addTodo} value="Add" />
       </div>
     );
   }

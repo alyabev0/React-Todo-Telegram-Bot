@@ -45,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
   .todo-list {
     color: ${props => props.theme.colors.light};
     padding: 1rem 0 0;
-    margin-left: 25%;
+    width: 100%;
   }
 
   .todo-input {
@@ -57,9 +57,11 @@ export const GlobalStyles = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
     padding: 0 0 0 0.75rem;
-    margin: 0;
+    // width: 50%;
+    width: 45%;
+    margin-left: 26.5%;
 
     &--completed {
       .todo-item-content-input {
@@ -68,23 +70,21 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
-  .todo-remove {
-    margin-left: 1rem;
-  }
+
 
   .todo-item-toggle {
     display: flex;
     position: relative;
     align-items: center;
-    margin-left: 5%;
   }
 
   .todo-item-text {
-    // margin-left: 30px;
+    margin-left: 15%;
     display: flex;
     align-items: center;
     padding: 0 0.75rem 0 0;
     transition: background-color 200ms ease;
+    width: 30%;
 
     &:hover,
     &:active {
@@ -122,6 +122,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .todo-item-content {
     margin-right: 1rem;
+    width: 30%;
   }
 
   .todo-item-content-input {
@@ -154,10 +155,10 @@ export const GlobalStyles = createGlobalStyle`
     opacity: 0.3;
   }
 
-  .todo-input-label {
-    color: ${props => props.theme.mode === 'light' ? props.theme.colors.light : props.theme.colors.dark};
-    display: block;
-  }
+  // .todo-input-label {
+  //   color: ${props => props.theme.mode === 'light' ? props.theme.colors.light : props.theme.colors.dark};
+  //   display: block;
+  // }
 
   .todo-input-add {
     display: block;
@@ -165,6 +166,8 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 100%;
     margin-bottom: 0.5rem;
   }
+
+
 
   [type="button"],
   [type="submit"] {
@@ -212,6 +215,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .d-flex {
     display: flex;
+    width: 30%;
   }
 
 

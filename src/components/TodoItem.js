@@ -1,6 +1,7 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
 import PencilIcon from './PencilIcon';
+import "./TodoItem.css"
 
 class TodoItem extends React.Component {
   constructor(props) {
