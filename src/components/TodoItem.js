@@ -84,6 +84,7 @@ class TodoItem extends React.Component {
         </div>
         <button
           className="todo-remove"
+          style={{ cursor: 'pointer'}}
           type="button"
           onClick={() => this.props.removeTodo(this.state.todo.id)}
         >

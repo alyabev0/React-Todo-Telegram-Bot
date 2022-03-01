@@ -1,4 +1,5 @@
 import React from 'react';
+import './TodoInput.css';
 
 class TodoInput extends React.Component {
   constructor(props) {
@@ -42,7 +43,7 @@ class TodoInput extends React.Component {
           onChange={this.handleUpdate}
           onKeyUp={this.handleKeyUp}
         />
-        <input type="button" className = "todo-input-add-button" onClick={this.addTodo} value="Add" />
+        <input type="button" style={{ cursor: 'pointer'}} className = "todo-input-add-button" onClick={this.addTodo} value="Add" />
       </div>
     );
   }

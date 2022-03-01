@@ -84,7 +84,7 @@ export const GlobalStyles = createGlobalStyle`
     align-items: center;
     padding: 0 0.75rem 0 0;
     transition: background-color 200ms ease;
-    width: 30%;
+    width: 85%;
 
     &:hover,
     &:active {
@@ -108,6 +108,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .pencil-icon {
+    margin-left: 15%;
     color: ${props => props.theme.mode === 'light' ? props.theme.colors.light : props.theme.colors.dark};
     fill: ${props => props.theme.mode === 'light' ? props.theme.colors.light : props.theme.colors.dark};
   }
@@ -122,7 +123,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .todo-item-content {
     margin-right: 1rem;
-    width: 30%;
+    width: 100%;
   }
 
   .todo-item-content-input {
@@ -210,12 +211,16 @@ export const GlobalStyles = createGlobalStyle`
 
   .todo-toggle-wrap {
     display: flex;
-    justify-content: flex-end
+    justify-content: flex-end;
+    height: 50%;
   }
-
+  .theme-toggler-button {
+    cursor: pointer;
+    height: 100%;
+  }
   .d-flex {
     display: flex;
-    width: 30%;
+    width: 100%;
   }
 
 
@@ -248,9 +253,7 @@ export const GlobalStyles = createGlobalStyle`
   //   font-size: 3rem;
   // }
   
-  // .theme-toggler-button {
-  //   margin-right: 0;
-  // }
+
 
 
   ${'' /* .theme-toggler-button {
