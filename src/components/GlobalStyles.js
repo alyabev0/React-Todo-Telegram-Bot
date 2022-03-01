@@ -48,11 +48,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .todo-input {
-    max-width: 500px;
+    max-width: 50%;
 
-    @media screen and (min-width: 768px) {
-      max-width: 30vw;
-    }
+    
   }
 
   .todo-item {
@@ -120,6 +118,7 @@ export const GlobalStyles = createGlobalStyle`
     text-align: center;
   }
 
+
   .todo-item-content {
     margin-right: 1rem;
   }
@@ -143,10 +142,9 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .todo-form {
-    max-width: 500px;
-
-    @media screen and (min-width: 768px) {
-      max-width: 30vw;
+    
+    max-width: 100%;
+    
     }
   }
 
@@ -191,23 +189,64 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   fieldset {
+    height: 20vw;
     border: 0;
     padding: 0;
   }
 
   .todo-legend {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+
+  }
+  .todo-legend h1 {
+    text-align: center;
   }
 
   .todo-toggle-wrap {
     display: flex;
-    align-items: center;
+    justify-content: flex-end
   }
 
   .d-flex {
     display: flex;
   }
+
+
+
+
+
+
+
+
+
+
+  // .todo-input {
+  //   max-width: 50%;
+  // }
+
+  // .todo-input-label {
+  //     color: ${props => props.theme.mode === 'light' ? props.theme.colors.light : props.theme.colors.dark};
+  //     display: inline;
+  //   }
+  
+  //   .todo-input-add {
+  //     display: block;
+  //     width: 100%;
+  //     max-width: 100%;
+  //     margin-bottom: 0.5rem;
+  //   }
+
+  // .todo-legend h1 {
+  //   text-align: center;
+  //   font-size: 3rem;
+  // }
+  
+  // .theme-toggler-button {
+  //   margin-right: 0;
+  // }
+
 
   ${'' /* .theme-toggler-button {
     all: unset;
