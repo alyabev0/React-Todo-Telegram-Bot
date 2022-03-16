@@ -1,39 +1,89 @@
 {
-  "name": "app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.2",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "5.0.0",
-    "styled-components": "^5.3.3",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+    "name": "@urban-bot/starter-javascript",
+    "version": "0.3.2",
+    "description": "Start write chatbots with urban-bot and javascript",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/urban-bot/urban-bot-starter-javascript.git"
+    },
+    "license": "MIT",
+    "main": "dist/index.js",
+    "files": [
+        "dist/**/*"
     ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "scripts": {
+        "build": "webpack",
+        "dev": "nodemon",
+        "lint": "eslint \"./src\" --ext \".js,.jsx\"",
+        "lint:fix": "npm run lint -- --fix",
+        "start": "node dist/index.js",
+        "start-tunnel": "ngrok http 8080",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@babel/core": "^7.12.16",
+        "@babel/preset-env": "^7.12.16",
+        "@babel/preset-react": "^7.12.13",
+        "@urban-bot/core": "^0.3.2",
+        "@urban-bot/discord": "^0.3.2",
+        "@urban-bot/facebook": "^0.3.2",
+        "@urban-bot/slack": "^0.3.2",
+        "@urban-bot/telegram": "^0.3.2",
+        "babel-loader": "^8.2.2",
+        "dotenv": "^8.2.0",
+        "file-loader": "^6.2.0",
+        "react": "^16.14.0",
+        "webpack": "^5.21.2",
+        "webpack-cli": "^4.5.0",
+        "webpack-node-externals": "^2.5.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.8.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^26.0.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "jest": "^27.4.7",
+        "ngrok": "^4.3.0",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.5.1"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "targets": {
+                        "node": "14"
+                    }
+                }
+            ],
+            "@babel/react"
+        ]
+    },
+    "prettier": {
+        "semi": true,
+        "trailingComma": "all",
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 4,
+        "arrowParens": "always",
+        "endOfLine": "lf"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "src"
+        ],
+        "ext": "js,jsx,json",
+        "exec": "webpack --mode=development && node ./dist/index.js"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "rootDir": "src"
+    }
 }
