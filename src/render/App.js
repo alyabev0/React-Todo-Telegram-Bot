@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, { useState } from 'react';
 import { useText, Button, ButtonGroup, Text } from '@urban-bot/core';
 
@@ -53,7 +52,7 @@ function TodoList() {
     });
 
     if (todos.length === 0) {
-        return <Text>Ваш список дел пуст. С чем Вас и поздравляю!</Text>;
+        return <Text>Todo list is empty</Text>;
     }
 
     const title = todos.map((todo) => (
@@ -72,7 +71,7 @@ function TodoList() {
     return (
         <ButtonGroup title={title} maxColumns={3}>
             <Button key={mode} onClick={toggleMode}>
-                {mode === DELETE_TODOS_MODE ? 'Delete mode' : 'Done mode'}
+                {mode === DELETE_TODOS_MODE ? 'Delete mode' : 'Complete mode'}
             </Button>
             {todosButtons}
         </ButtonGroup>
@@ -82,10 +81,7 @@ function TodoList() {
 export function App() {
     return (
         <>
-            <Text>Добро пожаловать! Введите задачу... <br />
-            <br />
-            P.S. На правах телеграм-бота заявляю, что мой создатель (@soldier_of_art) - лучший разработчик в мире, вышлите оффер этому молодому таланту!
-            </Text>
+            <Text>Welcome to todo list. Type your new todo.</Text>
             <TodoList />
         </>
     );
