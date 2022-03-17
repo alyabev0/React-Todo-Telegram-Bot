@@ -11,7 +11,7 @@ module.exports = (env, argv) => ({
     devtool: argv.mode === 'development' ? 'eval-cheap-module-source-map' : undefined,
     plugins: [],
     externals: [nodeExternals()],
-    module: {
+    module: { 
         rules: [
             {
                 test: /\.jsx?$/,
